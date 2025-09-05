@@ -9,6 +9,13 @@ class Autor(persistent.Persistent):
         self.__livros.append(livro)
         self._p_changed = True
 
+    def remover_livro(self, livro):
+        self.__livros.remove(livro)
+        self._p_changed = True
+
+    def get_livros(self):
+        return self.__livros
+    
 class Livro(persistent.Persistent):
     def __init__(self, titulo, ano):
         self.titulo = titulo

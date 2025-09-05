@@ -28,10 +28,10 @@ livro_androides = Livro("Androides Sonham com Ovelhas Elétricas?2", 1968)
 
 # --- 4. Estabelecimento dos Relacionamentos ---
 # Adicionamos os objetos Livro à lista de livros de cada Autor
-autor_asimov.livros.append(livro_fundacao)
-autor_asimov.livros.append(livro_robo)
+autor_asimov.adicionar_livro(livro_fundacao)
+autor_asimov.adicionar_livro(livro_robo)
 
-autor_pkd.livros.append(livro_androides)
+autor_pkd.adicionar_livro(livro_androides)
 
 # --- 5. Adição dos Objetos Principais à Raiz ---
 # Note que só precisamos adicionar os autores.

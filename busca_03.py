@@ -14,9 +14,9 @@ print("\n--- Iniciando busca para o Exemplo 2 (Parte 1) ---")
 
 for autor in lista_de_autores:
     print(f"Livros de '{autor.nome}':")
-    if autor.get_livros:
+    if autor.get_livros():
         # Aqui está a "mágica" da navegação: basta acessar o atributo!
-        for livro in autor.livros:
+        for livro in autor.get_livros():
             print(f"  - Título: {livro.titulo}, Ano: {livro.ano}")
     else:
         print("  - Nenhum livro cadastrado para este autor.")

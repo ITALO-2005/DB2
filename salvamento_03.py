@@ -14,6 +14,8 @@ root = connection.root()
 if 'autores' not in root:
     root['autores'] = []
 
+
+
 print(f"Autores existentes antes da transação: {len(root['autores'])}")
 
 # --- 3. Criação das Instâncias dos Objetos ---
@@ -44,6 +46,7 @@ print("Novos autores e livros preparados para o commit.")
 # Salva TUDO (os 2 autores e os 3 livros) de uma vez.
 # Se ocorrer um erro aqui, NADA é salvo.
 try:
+    root._p_changed = True
     transaction.commit()
     print("Sucesso! Transação confirmada.")
     print(f"Autores existentes após a transação: {len(root['autores'])}")
